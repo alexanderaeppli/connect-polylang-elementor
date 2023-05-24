@@ -90,7 +90,7 @@ class PolylangCategory extends Base_Category {
 
 			$items[ 'website-language-' . $lang_data->slug ] = array(
 				'title'       => $lang_data->name,
-				'url'         => esc_url( $lang_data->home_url ),
+				'url'         => esc_url( $lang_data->get_home_url() ),
 				'icon'        => 'eye',
 				'keywords'    => array(
 					'polylang',

@@ -61,8 +61,8 @@ class ElementorAssets {
 			$this->all_domains[] = wp_parse_url( $domain, PHP_URL_HOST );
 		}
 
-		$this->current_domain = $current_language->home_url;
-		$this->default_domain = $default_language->home_url;
+		$this->current_domain = $current_language->get_home_url();
+		$this->default_domain = $default_language->get_home_url();
 
 		// Add filters.
 		add_filter( 'script_loader_src', array( $this, 'translate_url' ) );
